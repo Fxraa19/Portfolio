@@ -17,5 +17,5 @@ A simple GitHub Pages portfolio site with an embedded PDF viewer.
 4. Choose branch **main** and folder **/root**.
 5. Save.
 
-Your site should publish at:
+Site published at:
 `https://fxraa19.github.io/Portfolio/`
