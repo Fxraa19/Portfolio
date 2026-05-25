@@ -20,47 +20,21 @@
   <header class="hero">
 
     <nav class="nav">
-
-      <a class="logo" href="#top">
-        Farah Swilam
-      </a>
+      <a class="logo" href="#top">Farah Swilam</a>
 
       <div class="links">
-
-        <a href="#portfolio">
-          Portfolio
-        </a>
-
-        <a
-          href="Farah-Swilam-Portfolio-2026.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          Open PDF
-        </a>
-
-        <a
-          href="Farah-Swilam-Portfolio-2026.pdf"
-          download
-        >
-          Download
-        </a>
-
+        <a href="#portfolio">Portfolio</a>
+        <a href="Farah-Swilam-Portfolio-2026.pdf" target="_blank" rel="noopener">Open PDF</a>
+        <a href="Farah-Swilam-Portfolio-2026.pdf" download>Download</a>
       </div>
-
     </nav>
 
     <section id="top" class="intro">
 
       <div class="intro-text">
+        <p class="eyebrow">Architectural / Digital Fabrication</p>
 
-        <p class="eyebrow">
-          Architectural / Digital Fabrication
-        </p>
-
-        <h1>
-          Selected Works Portfolio
-        </h1>
+        <h1>Selected Works Portfolio</h1>
 
         <p class="summary">
           A curated portfolio exploring computational design,
@@ -69,10 +43,7 @@
         </p>
 
         <div class="buttons">
-
-          <a class="button primary" href="#portfolio">
-            View Portfolio
-          </a>
+          <a class="button primary" href="#portfolio">View Portfolio</a>
 
           <a
             class="button secondary"
@@ -82,9 +53,7 @@
           >
             Open PDF
           </a>
-
         </div>
-
       </div>
 
       <img
@@ -102,24 +71,17 @@
     <section id="portfolio" class="viewer-section">
 
       <div class="section-heading">
+        <p class="eyebrow">Portfolio Viewer</p>
 
-        <p class="eyebrow">
-          Portfolio Viewer
-        </p>
-
-        <h2>
-          Browse Portfolio Pages
-        </h2>
+        <h2>Browse Portfolio Pages</h2>
 
         <p>
           Browse the portfolio page by page using the arrows below,
           or open/download the full PDF version.
         </p>
-
       </div>
 
       <div class="pdf-actions">
-
         <a
           href="Farah-Swilam-Portfolio-2026.pdf"
           target="_blank"
@@ -134,13 +96,13 @@
         >
           Download PDF
         </a>
-
       </div>
 
       <div class="page-viewer">
 
         <button
           class="page-btn left-btn"
+          type="button"
           onclick="prevPage()"
           aria-label="Previous page"
         >
@@ -148,17 +110,16 @@
         </button>
 
         <div class="page-image-wrapper">
-
           <img
             id="portfolioPage"
             src="page-01.png"
-            alt="Portfolio Page"
+            alt="Portfolio Page 1"
           />
-
         </div>
 
         <button
           class="page-btn right-btn"
+          type="button"
           onclick="nextPage()"
           aria-label="Next page"
         >
@@ -168,7 +129,7 @@
       </div>
 
       <p class="page-count">
-        Page <span id="currentPage">1</span> / 26
+        Page <span id="currentPage">1</span> / <span id="totalPages">26</span>
       </p>
 
     </section>
@@ -176,60 +137,44 @@
   </main>
 
   <footer>
-
-    <p>
-      © 2026 Farah Swilam
-    </p>
+    <p>© 2026 Farah Swilam</p>
 
     <a href="mailto:Farahswilam19@gmail.com">
       Farahswilam19@gmail.com
     </a>
-
   </footer>
 
   <script>
-
     const totalPages = 26;
-
     let currentPage = 1;
 
+    const pageImage = document.getElementById("portfolioPage");
+    const currentPageText = document.getElementById("currentPage");
+    const totalPagesText = document.getElementById("totalPages");
+
+    totalPagesText.textContent = totalPages;
+
     function updatePage() {
+      const pageNumber = String(currentPage).padStart(2, "0");
 
-      const pageNumber =
-        String(currentPage).padStart(2, "0");
-
-      document.getElementById("portfolioPage").src =
-        `page-${pageNumber}.png`;
-
-      document.getElementById("currentPage").textContent =
-        currentPage;
-
+      pageImage.src = `page-${pageNumber}.png`;
+      pageImage.alt = `Portfolio Page ${currentPage}`;
+      currentPageText.textContent = currentPage;
     }
 
     function nextPage() {
-
       if (currentPage < totalPages) {
-
         currentPage++;
-
         updatePage();
-
       }
-
     }
 
     function prevPage() {
-
       if (currentPage > 1) {
-
         currentPage--;
-
         updatePage();
-
       }
-
     }
-
   </script>
 
 </body>
