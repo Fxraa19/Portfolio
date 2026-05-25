@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Farah Swilam | Portfolio</title>
-  <meta name="description" content="Farah Swilam architectural and digital fabrication portfolio." />
+
+  <meta
+    name="description"
+    content="Farah Swilam architectural and digital fabrication portfolio."
+  />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -13,21 +20,47 @@
   <header class="hero">
 
     <nav class="nav">
-      <a class="logo" href="#top">Farah Swilam</a>
+
+      <a class="logo" href="#top">
+        Farah Swilam
+      </a>
 
       <div class="links">
-        <a href="#portfolio">Portfolio</a>
-        <a href="Farah-Swilam-Portfolio-2026.pdf" target="_blank" rel="noopener">Open PDF</a>
-        <a href="Farah-Swilam-Portfolio-2026.pdf" download>Download</a>
+
+        <a href="#portfolio">
+          Portfolio
+        </a>
+
+        <a
+          href="Farah-Swilam-Portfolio-2026.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          Open PDF
+        </a>
+
+        <a
+          href="Farah-Swilam-Portfolio-2026.pdf"
+          download
+        >
+          Download
+        </a>
+
       </div>
+
     </nav>
 
     <section id="top" class="intro">
 
       <div class="intro-text">
-        <p class="eyebrow">Architectural / Digital Fabrication</p>
 
-        <h1>Selected Works Portfolio</h1>
+        <p class="eyebrow">
+          Architectural / Digital Fabrication
+        </p>
+
+        <h1>
+          Selected Works Portfolio
+        </h1>
 
         <p class="summary">
           A curated portfolio exploring computational design,
@@ -36,17 +69,22 @@
         </p>
 
         <div class="buttons">
+
           <a class="button primary" href="#portfolio">
             View Portfolio
           </a>
 
-          <a class="button secondary"
-             href="Farah-Swilam-Portfolio-2026.pdf"
-             target="_blank"
-             rel="noopener">
+          <a
+            class="button secondary"
+            href="Farah-Swilam-Portfolio-2026.pdf"
+            target="_blank"
+            rel="noopener"
+          >
             Open PDF
           </a>
+
         </div>
+
       </div>
 
       <img
@@ -64,31 +102,47 @@
     <section id="portfolio" class="viewer-section">
 
       <div class="section-heading">
-        <p class="eyebrow">Portfolio Viewer</p>
 
-        <h2>Browse Portfolio Pages</h2>
+        <p class="eyebrow">
+          Portfolio Viewer
+        </p>
+
+        <h2>
+          Browse Portfolio Pages
+        </h2>
 
         <p>
           Browse the portfolio page by page using the arrows below,
           or open/download the full PDF version.
         </p>
+
       </div>
 
       <div class="pdf-actions">
-        <a href="Farah-Swilam-Portfolio-2026.pdf"
-           target="_blank"
-           rel="noopener">
+
+        <a
+          href="Farah-Swilam-Portfolio-2026.pdf"
+          target="_blank"
+          rel="noopener"
+        >
           Open PDF
         </a>
 
-        <a href="Farah-Swilam-Portfolio-2026.pdf" download>
+        <a
+          href="Farah-Swilam-Portfolio-2026.pdf"
+          download
+        >
           Download PDF
         </a>
+
       </div>
 
       <div class="page-viewer">
 
-        <button class="page-btn" onclick="prevPage()">
+        <button
+          class="page-btn"
+          onclick="prevPage()"
+        >
           ‹
         </button>
 
@@ -98,7 +152,10 @@
           alt="Portfolio Page"
         />
 
-        <button class="page-btn" onclick="nextPage()">
+        <button
+          class="page-btn"
+          onclick="nextPage()"
+        >
           ›
         </button>
 
@@ -113,16 +170,21 @@
   </main>
 
   <footer>
-    <p>© 2026 Farah Swilam</p>
+
+    <p>
+      © 2026 Farah Swilam
+    </p>
 
     <a href="mailto:Farahswilam19@gmail.com">
       Farahswilam19@gmail.com
     </a>
+
   </footer>
 
   <script>
 
     const totalPages = 26;
+
     let currentPage = 1;
 
     function updatePage() {
@@ -144,7 +206,9 @@
         currentPage++;
 
         updatePage();
+
       }
+
     }
 
     function prevPage() {
@@ -154,7 +218,9 @@
         currentPage--;
 
         updatePage();
+
       }
+
     }
 
   </script>
