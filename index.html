@@ -7,10 +7,14 @@
   <meta name="description" content="Farah Swilam architectural and digital fabrication portfolio." />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
   <header class="hero">
+
     <nav class="nav">
       <a class="logo" href="#top">Farah Swilam</a>
+
       <div class="links">
         <a href="#portfolio">Portfolio</a>
         <a href="Farah-Swilam-Portfolio-2026.pdf" target="_blank" rel="noopener">Open PDF</a>
@@ -19,46 +23,141 @@
     </nav>
 
     <section id="top" class="intro">
+
       <div class="intro-text">
         <p class="eyebrow">Architectural / Digital Fabrication</p>
+
         <h1>Selected Works Portfolio</h1>
+
         <p class="summary">
-          A curated portfolio exploring computational design, digital fabrication, AI-assisted workflows, and spatial experience.
+          A curated portfolio exploring computational design,
+          digital fabrication, AI-assisted workflows,
+          and spatial experience.
         </p>
+
         <div class="buttons">
-          <a class="button primary" href="#portfolio">View embedded portfolio</a>
-          <a class="button secondary" href="Farah-Swilam-Portfolio-2026.pdf" target="_blank" rel="noopener">Open in new tab</a>
+          <a class="button primary" href="#portfolio">
+            View Portfolio
+          </a>
+
+          <a class="button secondary"
+             href="Farah-Swilam-Portfolio-2026.pdf"
+             target="_blank"
+             rel="noopener">
+            Open PDF
+          </a>
         </div>
       </div>
-      <img class="cover" src="cover.jpg" alt="Portfolio cover preview" />
+
+      <img
+        class="cover"
+        src="cover.jpg"
+        alt="Portfolio cover preview"
+      />
+
     </section>
+
   </header>
 
   <main>
+
     <section id="portfolio" class="viewer-section">
+
       <div class="section-heading">
-        <p class="eyebrow">PDF Portfolio</p>
-        <h2>View the full portfolio</h2>
-        <p>Use the embedded viewer below, or open/download the PDF if your browser does not display it properly.</p>
+        <p class="eyebrow">Portfolio Viewer</p>
+
+        <h2>Browse Portfolio Pages</h2>
+
+        <p>
+          Browse the portfolio page by page using the arrows below,
+          or open/download the full PDF version.
+        </p>
       </div>
 
       <div class="pdf-actions">
-        <a href="Farah-Swilam-Portfolio-2026.pdf" target="_blank" rel="noopener">Open PDF</a>
-        <a href="Farah-Swilam-Portfolio-2026.pdf" download>Download PDF</a>
+        <a href="Farah-Swilam-Portfolio-2026.pdf"
+           target="_blank"
+           rel="noopener">
+          Open PDF
+        </a>
+
+        <a href="Farah-Swilam-Portfolio-2026.pdf" download>
+          Download PDF
+        </a>
       </div>
 
-      <div class="pdf-frame">
-        <object data="Farah-Swilam-Portfolio-2026.pdf" type="application/pdf">
-          <iframe src="Farah-Swilam-Portfolio-2026.pdf" title="Farah Swilam Portfolio PDF"></iframe>
-          <p>Your browser cannot display this PDF. <a href="Farah-Swilam-Portfolio-2026.pdf">Open the portfolio here.</a></p>
-        </object>
+      <div class="page-viewer">
+
+        <button class="page-btn" onclick="prevPage()">
+          ‹
+        </button>
+
+        <img
+          id="portfolioPage"
+          src="page-01.png"
+          alt="Portfolio Page"
+        />
+
+        <button class="page-btn" onclick="nextPage()">
+          ›
+        </button>
+
       </div>
+
+      <p class="page-count">
+        Page <span id="currentPage">1</span> / 26
+      </p>
+
     </section>
+
   </main>
 
   <footer>
     <p>© 2026 Farah Swilam</p>
-    <a href="mailto:Farahswilam19@gmail.com">Farahswilam19@gmail.com</a>
+
+    <a href="mailto:Farahswilam19@gmail.com">
+      Farahswilam19@gmail.com
+    </a>
   </footer>
+
+  <script>
+
+    const totalPages = 26;
+    let currentPage = 1;
+
+    function updatePage() {
+
+      const pageNumber =
+        String(currentPage).padStart(2, "0");
+
+      document.getElementById("portfolioPage").src =
+        `page-${pageNumber}.png`;
+
+      document.getElementById("currentPage").textContent =
+        currentPage;
+    }
+
+    function nextPage() {
+
+      if (currentPage < totalPages) {
+
+        currentPage++;
+
+        updatePage();
+      }
+    }
+
+    function prevPage() {
+
+      if (currentPage > 1) {
+
+        currentPage--;
+
+        updatePage();
+      }
+    }
+
+  </script>
+
 </body>
 </html>
