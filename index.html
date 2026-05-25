@@ -140,23 +140,29 @@
       <div class="page-viewer">
 
         <button
-          class="page-btn"
+          class="page-btn left-btn"
           onclick="prevPage()"
+          aria-label="Previous page"
         >
-          ‹
+          &#10094;
         </button>
 
-        <img
-          id="portfolioPage"
-          src="page-01.png"
-          alt="Portfolio Page"
-        />
+        <div class="page-image-wrapper">
+
+          <img
+            id="portfolioPage"
+            src="page-01.png"
+            alt="Portfolio Page"
+          />
+
+        </div>
 
         <button
-          class="page-btn"
+          class="page-btn right-btn"
           onclick="nextPage()"
+          aria-label="Next page"
         >
-          ›
+          &#10095;
         </button>
 
       </div>
@@ -197,6 +203,7 @@
 
       document.getElementById("currentPage").textContent =
         currentPage;
+
     }
 
     function nextPage() {
