@@ -12,7 +12,7 @@
     content="Farah Swilam architectural and digital fabrication portfolio."
   />
 
-  <link rel="stylesheet" href="style.css?v=dark1" />
+  <link rel="stylesheet" href="style.css?v=dark2" />
 </head>
 
 <body>
@@ -20,10 +20,16 @@
   <header class="hero">
 
     <nav class="nav">
-      <a class="logo" href="#top">Farah Swilam</a>
+
+      <a class="logo" href="#top">
+        Farah Swilam
+      </a>
 
       <div class="links">
-        <a href="#portfolio">Portfolio</a>
+
+        <a href="#portfolio">
+          Portfolio
+        </a>
 
         <a
           href="Farah-Swilam-Portfolio-2026.pdf"
@@ -39,7 +45,9 @@
         >
           Download
         </a>
+
       </div>
+
     </nav>
 
     <section id="top" class="intro">
@@ -141,11 +149,13 @@
         </button>
 
         <div class="page-image-wrapper">
+
           <img
             id="portfolioPage"
             src="page-01.png"
             alt="Portfolio Page 1"
           />
+
         </div>
 
         <button
@@ -160,9 +170,15 @@
       </div>
 
       <p class="page-count">
-        Page <span id="currentPage">1</span>
+
+        Page
+
+        <span id="currentPage">1</span>
+
         /
+
         <span id="totalPages">26</span>
+
       </p>
 
     </section>
@@ -170,11 +186,15 @@
   </main>
 
   <footer>
-    <p>© 2026 Farah Swilam</p>
+
+    <p>
+      © 2026 Farah Swilam
+    </p>
 
     <a href="mailto:Farahswilam19@gmail.com">
       Farahswilam19@gmail.com
     </a>
+
   </footer>
 
   <script>
@@ -212,25 +232,33 @@
 
     function nextPage() {
 
-      if (currentPage < totalPages) {
+      if (currentPage >= totalPages) {
+
+        currentPage = 1;
+
+      } else {
 
         currentPage++;
 
-        updatePage();
-
       }
+
+      updatePage();
 
     }
 
     function prevPage() {
 
-      if (currentPage > 1) {
+      if (currentPage <= 1) {
+
+        currentPage = totalPages;
+
+      } else {
 
         currentPage--;
 
-        updatePage();
-
       }
+
+      updatePage();
 
     }
 
